@@ -2,6 +2,8 @@
 use std::time::UNIX_EPOCH;
 use std::time::SystemTime;
 
+extern crate num_cpus;
+
 mod factorial;
 mod fibonacci;
 
@@ -11,6 +13,13 @@ use fibonacci::calculate_fibonacci_with_loop;
 use fibonacci::calculate_fibonacci_recursively;
 
 fn main () {
+
+    let cpus = num_cpus::get();
+    if cpus > 1 {
+        println!("We are on a multicore system with {} CPUs", cpus);
+    } else {
+        println!("We are on a single core system");
+    }
 
     let number_of_iterations_factorial = 10000000;
     let parameter_factorial = 20;

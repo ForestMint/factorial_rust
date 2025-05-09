@@ -6,3 +6,6 @@ authors = ["nico"]
 [[bin]]
 name = "main"
 path = "src/main.rs"
+
+[dependencies]
+num_cpus = "1.0"
