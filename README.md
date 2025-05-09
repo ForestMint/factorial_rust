@@ -1,13 +1,19 @@
 The aim of this program is to know which is faster between calculating factorial with a loop or recursively
 
+# To run the tests, run the following command
+
+```sh
+$ cargo test
+```
+
 # To compile the program, run the following command
 
 ```sh
-$ rustc main.rs
+$ cargo build
 ```
 
 # Then, to execute the program, run the following command
 
 ```sh
-$ ./main
+$ ./target/debug/main
 ```
