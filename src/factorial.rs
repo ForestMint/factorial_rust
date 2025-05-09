@@ -15,6 +15,15 @@ pub fn calculate_factorial_recursively (n: i64) -> i64 {
     }
 }
 
+pub fn calculate_fibonacci_recursively (n: i64)  -> i64 {
+    match n {
+        1 => 1,
+        2 => 1,
+        // Handle the rest of cases
+        _ => calculate_fibonacci_recursively(n-2)+calculate_fibonacci_recursively(n-1),
+    }
+}
+
 #[cfg(test)]
 mod tests {
     // Note this useful idiom: importing names from outer (for mod tests) scope.
@@ -38,5 +47,17 @@ mod tests {
         assert_eq!(calculate_factorial_with_loop(3), 6);
         assert_eq!(calculate_factorial_with_loop(4), 24);
         assert_eq!(calculate_factorial_with_loop(5), 120);
+    }
+
+    #[test]
+    fn test_calculate_fibonacci_recursively() {
+        assert_eq!(calculate_fibonacci_recursively(1), 1);
+        assert_eq!(calculate_fibonacci_recursively(2), 1);
+        assert_eq!(calculate_fibonacci_recursively(3), 2);
+        assert_eq!(calculate_fibonacci_recursively(4), 3);
+        assert_eq!(calculate_fibonacci_recursively(5), 5);
+        assert_eq!(calculate_fibonacci_recursively(6), 8);
+        assert_eq!(calculate_fibonacci_recursively(7), 13);
+        assert_eq!(calculate_fibonacci_recursively(8), 21);
     }
 }
