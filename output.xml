@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.10 on linux)" generated="2025-05-13T10:46:17.395558" rpa="false" schemaversion="5">
+<suite id="s1" name="Tester Add" source="/home/desdames-nicolas/Desktop/loop_vs_recursive_benchmark_in_rust/tester_add.robot">
+<test id="s1-t1" name="Test Add Function" line="10">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-13T10:46:17.468978" level="INFO">Starting process:
+python ./python_script.py</msg>
+<msg time="2025-05-13T10:46:17.472705" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-13T10:46:17.516108" level="INFO">Process completed.</msg>
+<msg time="2025-05-13T10:46:17.516558" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>python</arg>
+<arg>${PYTHON_SCRIPT}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-13T10:46:17.468523" elapsed="0.048113"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-05-13T10:46:17.517845" level="INFO">Argument types are:
+&lt;class 'robot.libraries.Process.ExecutionResult'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2025-05-13T10:46:17.518151" level="FAIL">'&lt;result object with rc 0&gt;' cannot be converted to a floating point number: TypeError: float() argument must be a string or a real number, not 'ExecutionResult'</msg>
+<arg>${result}</arg>
+<arg>Result of aadd : 5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="FAIL" start="2025-05-13T10:46:17.517352" elapsed="0.001340">'&lt;result object with rc 0&gt;' cannot be converted to a floating point number: TypeError: float() argument must be a string or a real number, not 'ExecutionResult'</status>
+</kw>
+<status status="FAIL" start="2025-05-13T10:46:17.467361" elapsed="0.051758">'&lt;result object with rc 0&gt;' cannot be converted to a floating point number: TypeError: float() argument must be a string or a real number, not 'ExecutionResult'</status>
+</test>
+<test id="s1-t2" name="Test Bidon" line="14">
+<status status="FAIL" start="2025-05-13T10:46:17.519613" elapsed="0.000534">Test cannot be empty.</status>
+</test>
+<status status="FAIL" start="2025-05-13T10:46:17.396921" elapsed="0.123823"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tester Add" id="s1" pass="0" fail="2" skip="0">Tester Add</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-13T10:46:17.397171" level="ERROR">Error in file '/home/desdames-nicolas/Desktop/loop_vs_recursive_benchmark_in_rust/tester_add.robot' on line 8: Setting variable 'dhjsdjhd' failed: Invalid variable name 'dhjsdjhd'.</msg>
+</errors>
+</robot>
