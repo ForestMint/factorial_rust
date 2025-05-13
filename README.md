@@ -1,6 +1,6 @@
 # The aim of this program is to know which is faster between calculating factorial with a loop or recursively
 
-## To run the Rust tests, run the following command
+## Run the Rust tests
 
 ```sh
 $ cargo test
@@ -17,21 +17,25 @@ If not, run the following command :
 $ pip install robotframework
 ```
 
-### Run the tests
-
-Run the following command :
+### Compile the program
 
 ```sh
-$ python -m robot tester.robot
+$ cargo build --release
 ```
 
-## To compile the program, run the following command
+### Run the tests
+
+```sh
+$ python -m robot test_my_functions.robot
+```
+
+## Compile the program
 
 ```sh
 $ cargo build
 ```
 
-## Then, to execute the program, run the following command
+## Execute the program
 
 ```sh
 $ ./target/debug/main

@@ -7,11 +7,14 @@ lib = ctypes.CDLL('./target/release/libmain.so')  # Change the path as needed
 lib.add.restype = ctypes.c_int
 lib.add.argtypes = [ctypes.c_int, ctypes.c_int]
 
-# Call the function
-result = lib.add(2, 3)
+def function_calculate_factorial_with_loop(arg1) :
+    return lib.function_calculate_factorial_with_loop(int(arg1))
 
-def add(arg1, arg2) :
-    return lib.add(int(arg1), int(arg2))
+def function_calculate_factorial_recursively(arg1) :
+    return lib.function_calculate_factorial_recursively(int(arg1))
 
-print("Result of add:", result)  # Should print 5
-print(result)  # Should print 5
+def function_calculate_fibonacci_with_loop(arg1) :
+    return lib.function_calculate_fibonacci_with_loop(int(arg1))
+
+def function_calculate_fibonacci_recursively(arg1) :
+    return lib.function_calculate_fibonacci_recursively(int(arg1))
