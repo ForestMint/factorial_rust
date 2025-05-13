@@ -1,4 +1,4 @@
-# The aim of this program is to know which is faster between calculating factorial with a loop or recursively
+# The aim of this program is to know which is faster between calculating factorial and Fibonacci with a loop or recursively
 
 ## Run the Rust tests
 
