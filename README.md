@@ -20,7 +20,7 @@ $ pip install robotframework
 ### Compile the program
 
 ```sh
-$ cargo build --release
+$ cargo build
 ```
 
 ### Run the tests
@@ -32,7 +32,7 @@ $ python -m robot test_my_functions.robot
 ## Compile the program
 
 ```sh
-$ cargo build
+$ cargo build --release
 ```
 
 ## Execute the program

@@ -1,7 +1,7 @@
 import ctypes
 
 # Load the shared library
-lib = ctypes.CDLL('./target/release/libmain.so')  # Change the path as needed
+lib = ctypes.CDLL('./target/debug/libmain.so')  # Change the path as needed
 
 # Define the return type and argument types for the `add` function
 lib.add.restype = ctypes.c_int
