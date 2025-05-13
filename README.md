@@ -40,3 +40,9 @@ $ cargo build --release
 ```sh
 $ ./target/debug/main
 ```
+
+## Clean the repository from generated files
+
+```sh
+$ ./clean.sh
+```
